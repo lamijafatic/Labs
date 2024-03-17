@@ -27,9 +27,9 @@ a{
     background-color:#E47272;
     color:white;
     border-radius: 20px;
-    font-size: 30px;
-    height:60px;
-    width:300px;
+    font-size: 20px;
+    height:40px;
+    width:130px;
     
 }
 #okvir{
@@ -45,5 +45,7 @@ a{
 input[type="text"],input[type="password"]{
 width:85%;
 height:60px;
+display: block;
+
 
 }

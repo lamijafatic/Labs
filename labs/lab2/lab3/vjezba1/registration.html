@@ -1,60 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 <title>Lab 1</title>
 <link rel="stylesheet" href="registration.css"
 <meta charset="utf-8">
 
 </head>
 <body>
-    <div id="okvir" style="margin:auto; display:block ; text-align:center;">
-    <img src="ibu_ikona.png" alt="ibu ikona" style="margin:auto;display:block; height:150px; width:150px">
+    <div id="okvir" style="margin:auto; display:block ;">
+    <img src="ibu_ikona2.png" alt="ibu ikona" ">
     <h2>International Burch University</h1>
     <h1>REGISTRATION FORM</h1>
     
     <form action="login.html">
-       <label for="firstname">Firstname::</label> <br>
+      <div class="drzac">
+      <div class="prva_kolona">
+       <label >Firstname:</label>
        <input type="text" id="firstname" name="firstname" placeholder="Enter your firstname" > <br>
-      
-       <label for="lastname">Lastname:</label> <br>
+       <label>Password:</label> 
+       <label >Date of birth:</label> 
+       <label>Place of birth:</label> 
+       <label style="margin-bottom:95px;">Gender:</label> 
+       <label >Email:</label> 
+       <label style="margin-bottom: 30px;" >Phone:</label> 
+       <label>Hair  color:</label>
+       <label for "textbox">Notes:</label>
+      </div>
+      <div class="druga_kolona">
+       <label >Lastname:</label> 
        <input type="text" id="lastname" name="lastname" placeholder="Enter your lastname" > <br>
       
-       <label for="password">Password:</label> <br>
+       
        <input type="password" id="password" name="password"  > <br>
 
-       <label for="date">Date of birth:</label> <br>
+       
        <input type="date" id="date" name="date"  > <br>
 
-       <label for="place">Place of birth:</label> <br> 
+       
        <input type="text" id="place" name="place"  ><br>
-       <label>Gender:</label> <br>
-       <label>
+       
+       <label style="margin:0px;" >
         <input type="radio" name="gender" value="male">
         Male
     </label>
     <br>
-    <label>
+    <label style="margin:0px;" >
         <input type="radio" name="gender" value="female">
         Female
     </label>
     <br>
-    <label>
+    <label style="margin:0px;">
         <input type="radio" name="gender" value="other">
         Other
     </label> <br>
 
 
-    <label for="email">Email:</label> <br>
+   
        <input type="text" id="email" name="email"  > <br>
       
-       <label for="phone">Phone:</label> <br>
+       
        <input type="text" id="phone" name="phone"  > <br>
       <br>
-       <label for="color">Hair  color:</label>
+     
         <input type="color" id="color" name="color"> <br>
-        
-
-        <label for="textbox">Notes:</label>
+      </div>
+    </div>
+       
+   
         <br>
         <textarea id="textbox" name="textbox" rows="4" cols="50"></textarea>
         <br>
@@ -64,7 +79,7 @@
           Receive notifications
       </label>
       <br>
-        <input type="submit" value="Submit">
+        <input id="button" type="submit" value="Register">
 
 
 
