@@ -1,0 +1,50 @@
+.floating-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); 
+    margin-top: 50px;
+  }
+  .card-title {
+    font-weight: bold;
+  }
+  .login100-pic{
+      width: 350px;
+  }
+  .login100-pic img{
+      max-width:100%;
+  }
+  .height{
+      height: 80vh; 
+
+  }
+  .position-relative {
+position: relative;
+}
+.icon-padding {
+padding-left: 15px; 
+}
+
+.position-absolute {
+position: absolute;
+}
+
+.top-50 {
+top: 50%;
+}
+
+.translate-middle-y {
+transform: translateY(-50%);
+}
+#password,#email{
+  background-color: #e0e0e0;
+}
+i{
+  color: #555555;
+}
+.pozadina{
+  background: #9053c7;
+background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
