@@ -6,28 +6,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
                 
    
     <title>Dobrodošli</title>
+   
+    
 </head>
 <body>
-    <header >
-        <span>Naučno udruženje</span>
-        
-        <h1>Nikola Tesla</h1>
-        <nav>
-            <ul style="list-style-type: none; margin-right:50px; padding: 0;">
-                <li><a href="#biografija" >Home</a></li>
-                <li><a href="#izumi" >O nama</a></li>
-                <li><a href="#naslovna">Aktuelnosti</a></li>
-                <li "><a href="#naslovna" >Pridruži se</a></li>
-
-            </ul>
-        </nav>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="flex-grow: 1;">
+                <span style="font-family: 'Lucida Handwriting'; font-size: 16px; color: white;">Naučno udruženje</span>
+                <h1 style="font-family: 'Electrolize', sans-serif; font-size: 40px; font-weight: bold; color: black; margin: 0;">Nikola Tesla</h1>
+            </div>
+            <nav>
+                <ul class="nav justify-content-end" style="list-style-type: none; margin: 0; padding: 0;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#biografija" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#izumi" style="color: white;">O nama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#naslovna" style="color: white;">Aktuelnosti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#naslovna" style="color: white;">Pridruži se</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <iframe
-src="https://www.youtube.com/embed/xP76q3quHb0?autoplay=1">
- </iframe>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xP76q3quHb0?autoplay=1"></iframe>
+    </div>
+    
 
     <section id="naslovna" style="padding: 20px; height: 400vh;">
         <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 24px;">Dobrodošli na stranicu o Nikoli Tesli</h2>
@@ -37,6 +60,43 @@ src="https://www.youtube.com/embed/xP76q3quHb0?autoplay=1">
         <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; text-align: justify;">Njegova strast prema znanosti i inovacijama inspirirala je mnoge ljude diljem svijeta. Iako je umro u relativnoj osami 7. siječnja 1943. godine, njegovo nasljeđe živi i danas. Njegove ideje o bežičnom prijenosu energije i komunikaciji još uvijek su predmet istraživanja i inspiracije za mnoge znanstvenike i inženjere.</p>
         <img src="tesla_lab.jpg" alt="Tesla u laboratoriju" style="max-width: 100%; height: auto;">
         <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; text-align: justify;">Tesla je bio poznat po svojoj viziji budućnosti i njegovom sanjarenju o tehničkim dostignućima koja su bila izvan dosega njegovog vremena. Njegove ideje su često bile ispred njegovog vremena, što ga je dovelo u sukob s mnogim suvremenicima i industrijskim magnatima. Unatoč tome, njegova genijalnost i doprinos čovječanstvu neprocjenjivi su i ostaju vječno zapamćeni.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="card-link">
+                        <div class="card text-center rounded-lg shadow-lg">
+                            <div class="card-body">
+                                <img src="atom.png" alt="Slika 1" style="width: 200px; height: 200px; object-fit: cover;" class="rounded-circle mx-auto d-block mb-3">
+                                <p class="card-text">Naučni rad</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="card-link">
+                        <div class="card text-center rounded-lg shadow-lg">
+                            <div class="card-body">
+                                <img src="edu.png" alt="Slika 2" style="width: 200px; height: 200px; object-fit: cover;" class="rounded-circle mx-auto d-block mb-3">
+                                <p class="card-text">Edukacije</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="card-link">
+                        <div class="card text-center rounded-lg shadow-lg">
+                            <div class="card-body">
+                                <img src="drustvi.png" alt="Slika 3" style="width: 200px; height: 200px; object-fit: cover;" class="rounded-circle mx-auto d-block mb-3">
+                                <p class="card-text">Dešavanja</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div><br><br><br>
+       
+       
+       
         <table border="1" style="width: 100%; border-collapse: collapse;">
             <caption style="font-size: 24px; font-weight: bold;">Izumi Nikole Tesle</caption>
             <thead>
@@ -87,6 +147,10 @@ src="https://www.youtube.com/embed/xP76q3quHb0?autoplay=1">
 
 
     <section id="biografija" style="padding: 20px; height: 400vh;">
+       
+            
+      
+        
         <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 24px;">Biografija</h2>
         <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; text-align: justify;">Nikola Tesla rođen je 10. srpnja 1856. godine u selu Smiljan, koji se tada nalazio u Habsburškoj Monarhiji, a danas je dio Hrvatske. Svoj rad posvetio je razvoju brojnih izuma u području elektrotehnike i bežične komunikacije.</p>
      
