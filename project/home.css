@@ -19,6 +19,10 @@ nav{
 .card-link:hover .card {
     background-color: #f0f0f0;
 }
+.grid-item img:hover{
+max-width: 105%;
+height: auto;
+}
 .naslov{
     font-family: 'Electrolize',sans-serif;
     margin:10px;

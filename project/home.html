@@ -7,6 +7,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
                 
    
@@ -123,6 +126,29 @@
         <div class="grid-item"><img src="drustvo5.jpg" alt="Slika 5"></div>
         <div class="grid-item"><img src="drustvo6.jpg" alt="Slika 6 "></div>
     </div>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Prijava uspješna</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+              Uspješno ste se prijavili na naš newsletter. Pratite nas za nadolazeće prilike i događaje.
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
     
        <!--
         <table border="1" style="width: 100%; border-collapse: collapse;">
@@ -184,7 +210,7 @@
         <label for="email" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px;">Prijavite se na naš newsletter:</label><br>
         <input type="email" id="email" name="email" placeholder="Unesite svoj e-mail" style="font-size: 18px; padding: 10px; width: calc(100% - 100px); border: 1px solid #ccc; border-radius: 5px; margin-right: 10px;" required>
         <input type="checkbox" id="newsletter-checkbox" style="display: none;">
-        <label for="newsletter-checkbox" class="newsletter-button" style="background-color: #4CAF50; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px;">Prijavi se</label>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="background-color: #4CAF50; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px;">Prijavi se</button>
         <div class="success-message">
             <p>Uspješno ste prijavljeni na naš newsletter!</p>
             <label for="newsletter-checkbox" class="close-button">OK</label>
