@@ -1,12 +1,37 @@
-body{
-    background-color: rgb(169, 192, 241);
-}
+
 nav li{
     display:inline;
     margin-right:20px;
 }
 nav ul{
     text-align: right;
+}
+
+.okvir{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.navbar {
+   margin-left: 0px;
+}
+
+
+  
+  
+.okvir span{
+    font-family: 'Electrolize', sans-serif; 
+    font-size: 50px; 
+    font-weight: bold; 
+    color: black;
+    padding-left:50px;
+    margin-right:20px;
+}
+.okvir p{
+    font-family: 'Lucida Handwriting';
+    font-size: 16px; 
+    color: white;
+     margin:0px
 }
 nav{
     padding-bottom:1px;
@@ -182,4 +207,23 @@ font-family: 'Electrolize',sans-serif;
     background-color: #45a049;
 }
 
-
+@media screen and (max-width:320px) {
+    .okvir span
+     {
+       font-size: 40px;
+       padding-left: 0px;
+    }
+    .okvir img{
+        display: none;
+    }
+}
+@media screen and (min-width:375px) {
+    .okvir span
+     {
+       font-size: 40px;
+       padding-left: 0px;
+    }
+    .okvir img{
+       
+    }
+}

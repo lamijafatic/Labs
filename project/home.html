@@ -2,14 +2,21 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="stylesheet" href="home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
 
                 
    
@@ -19,31 +26,48 @@
 </head>
 <body>
    
-    
     <header>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="flex-grow: 1;">
-                <p style="font-family: 'Lucida Handwriting'; font-size: 16px; color: white; margin:0px">Naučno udruženje</p>
-                <span style="font-family: 'Electrolize', sans-serif; font-size: 50px; font-weight: bold; color: black;padding-left:50px;margin-right:20px;">Nikola Tesla</span>
-               <img style="height:80px;" src="sijalica2.gif">
+       
+        <div class="container">
+            <div class="okvir">
+                <div style="flex-grow: 1;">
+                    <p>Naučno udruženje</p>
+                    <span>Nikola Tesla</span>
+                    <img style="height:80px;" src="sijalica2.gif">
+                </div>
             </div>
-            <nav >
-                <ul class="nav justify-content-end" style="list-style-type: none; margin: 0; padding: 0;">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: white;">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="o_nama.html" style="color: white;">O nama</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#naslovna" style="color: white;">Aktuelnosti</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#naslovna" style="color: white;">Pridruži se</a>
-                    </li>
-                </ul>
+            <nav class="navbar navbar-expand-md navbar-light">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:white;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="o_nama.html" style="color: white;">O nama</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aktuelnosti.html" style="color:  white">Aktuelnosti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pridruzi_se.html" style="color:  white">Pridruži se</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
+        
+        
+  
+        
+      
+        
+        
+        
+        
+        
     </header>
     
     
@@ -130,18 +154,18 @@
         <div class="modal-dialog">
           <div class="modal-content">
           
-            <!-- Modal Header -->
+          
             <div class="modal-header">
               <h4 class="modal-title">Prijava uspješna</h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             
-            <!-- Modal Body -->
+         
             <div class="modal-body">
               Uspješno ste se prijavili na naš newsletter. Pratite nas za nadolazeće prilike i događaje.
             </div>
             
-            <!-- Modal Footer -->
+           
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>

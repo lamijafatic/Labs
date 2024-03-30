@@ -1,0 +1,220 @@
+
+$primary-color: #2c2c99;
+$secondary-color: #1925cf;
+$btn-background: #cdd0d0;
+$btn-background-hover: #1925cf;
+$form-border-color: #ccc;
+$error-color: red;
+$container-bg: #e7e7e7;
+$container-padding: 30px;
+$container-border-radius: 10px;
+$container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$container-max-width: 600px;
+$font-family: 'Electrolize', sans-serif;
+$btn-font-size: 25px;
+
+
+@mixin margin($top, $right: null, $bottom: null, $left: null) {
+    margin-top: $top;
+    @if $right != null {
+        margin-right: $right;
+    }
+    @if $bottom != null {
+        margin-bottom: $bottom;
+    }
+    @if $left != null {
+        margin-left: $left;
+    }
+}
+
+.container {
+    background-color: $container-bg;
+    padding: $container-padding;
+    border-radius: $container-border-radius;
+    box-shadow: $container-box-shadow;
+    max-width: $container-max-width;
+    font-family: $font-family;
+    width: 100%;
+
+
+    .form-group {
+        @include margin(0 0 20px 0);
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid $form-border-color;
+            border-radius: 5px;
+        }
+
+        .fa {
+            margin-right: 10px;
+        }
+
+        &.error-message {
+            color: $error-color;
+            font-size: 14px;
+        }
+    }
+}
+
+.btn {
+    background-color: $btn-background !important;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: $btn-font-size !important;
+    margin: auto;
+
+    &:hover {
+        background-color: $btn-background-hover !important;
+    }
+}
+
+nav {
+    li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    ul {
+        text-align: right;
+    }
+
+    padding-bottom: 1px;
+}
+
+.card-link:hover .card {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+.naslov {
+    font-family: $font-family;
+    @include margin(50px null null 40px);
+    font-size: 45px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: bold;
+    font-family: $font-family;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px;
+
+    &:hover {
+        color: white;
+        text-decoration: bold;
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+header h1 {
+    font-family: $font-family;
+    font-size: 70px;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    color: black;
+}
+
+header span {
+    font-family: "Lucida Handwriting";
+    font-size: 20px;
+}
+
+header {
+    background-color: $primary-color;
+    padding: 5px;
+    margin: 0;
+
+    span, h1 {
+        padding-left: 15px;
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.blijedi {
+    font-size: 20px;
+    @include margin(70px);
+    margin-bottom: 20px;
+    font-family: $font-family;
+}
+
+.buttoni {
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    border: none;
+    padding: 5px 30px;
+    margin: 10px;
+    font-weight: bold;
+    font-family: $font-family;
+
+    &:hover {
+        color: black;
+        background-color: $primary-color;
+        transition: box-shadow 0.3s ease;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.success-message {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    #newsletter-checkbox:checked ~ & {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.close-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+
+    &:hover {
+        background-color: #45a049;
+    }
+}
+
+#pozadinski {
+    background-image: url("atom333.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

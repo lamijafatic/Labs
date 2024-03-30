@@ -27,7 +27,7 @@ table {
 
 
 body{
-    background-color: rgb(169, 192, 241);
+
 }
 nav li{
     display:inline;
@@ -53,6 +53,9 @@ nav{
     margin-top:50px;
     font-size: 45px;
     font-weight: bold;
+}
+.container{
+   
 }
 .grid-container {
     display: grid;
@@ -147,7 +150,7 @@ body{
 
     
 }
-#pozadinski{
+body{
     background-image: url("atom333.png");
 
     background-size: cover;
@@ -166,7 +169,23 @@ body{
     margin-bottom:0px;
     margin-top:0;
 }
-
+.card {
+    margin-bottom: 20px;
+    margin-top:10px;
+    overflow: hidden;
+  }
+.card img{
+  height: 150px;
+  width:255px;
+}
+.card-body{
+    height:200px !important;
+}
+.card-text{
+    height:100px;
+    max-height: 100px;
+    overflow: hidden;
+}
 .holder2{
     display: flex;
     width:900px;
