@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vjezba</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<table id="tabela">
+  <thead>
+    <tr>
+      <th onclick="sortTable('id')">ID<span class="sort-icon" id="idIcon"></span></th>
+      <th onclick="sortTable('name')">NAME<span class="sort-icon" id="nameIcon"></span></th>
+      <th onclick="sortTable('country')">COUNTRY<span class="sort-icon" id="countryIcon"></span></th>
+      <th onclick="sortTable('email')">EMAIL<span class="sort-icon" id="emailIcon"></span></th>
+      <th>ACTION</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody">
+  </tbody>
+</table>
+
+<script>
+ 
+  const podaci = [
+    { id: 1, name: 'John Doe', country: 'SAD', email: 'john@example.com' },
+    { id: 2, name: 'Jane Smith', country: 'Canada', email: 'jane@example.com' },
+    { id: 3, name: 'Alice Johnson', country: 'UK', email: 'alice@example.com' },
+    { id: 4, name: 'Alice Joon', country: 'Bosnia and Herzegovina', email: 'alice@example.com' }
+  
+  ];
+
+  let rastuce = true;
+  let sortirana = '';
+
+
+  function make_table() {
+    const tableBody = document.getElementById('tableBody');
+    tableBody.innerHTML = '';
+    podaci.forEach(user => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${user.id}</td>
+        <td><img src="icon.png" alt="ikonica">${user.name}</td>
+        <td>${user.country}</td>
+        <td>${user.email}</td>
+        <td><button onclick="openModal('${user.name}')">Click</button></td>
+      `;
+      tableBody.appendChild(row);
+    });
+  }
+
+
+  function sortTable(column) {
+    if (sortirana === column) {
+      rastuce = !rastuce;
+    } else {
+      rastuce = true;
+      sortirana = column;
+    }
+
+    podaci.sort((a, b) => {
+      const valA = a[column].toLowerCase();
+      const valB = b[column].toLowerCase();
+      if (valA < valB) return rastuce ? -1 : 1;
+      if (valA > valB) return rastuce ? 1 : -1;
+      return 0;
+    });
+
+    make_table();
+    update_sortirani(column);
+  }
+
+
+  function update_sortirani(column) {
+    const iconElements = document.querySelectorAll('.sort-icon');
+    iconElements.forEach(icon => icon.innerHTML = '');
+    const iconElement = document.getElementById(`${column}Icon`);
+    iconElement.innerHTML = rastuce ? '&#x25B2;' : '&#x25BC;';
+  }
+
+
+  function openModal(name) {
+    const modal = document.getElementById('modal');
+    const modalText = document.getElementById('modalText');
+    modalText.innerHTML = `You clicked on: ${name}`;
+    modal.style.display = 'block';
+  }
+
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+
+
+
+
+  make_table();
+</script>
+
+</body>
+</html>
