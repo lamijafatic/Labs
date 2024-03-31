@@ -64,14 +64,7 @@ nav ul{
 nav{
     padding-bottom:1px;
 }
-.card-link:hover .card {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
 
-}
-.card-link:hover .card {
-    background-color: #f0f0f0;
-}
 .naslov{
     font-family: 'Electrolize',sans-serif;
     margin-left:40px;

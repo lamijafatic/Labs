@@ -1,5 +1,4 @@
 .container {
-  padding: 30px;
   border-radius: 10px;
   max-width: 600px;
   font-family: "Electrolize", sans-serif;
@@ -54,14 +53,6 @@ nav ul {
   text-align: right;
 }
 
-.card-link:hover .card {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-.card-link:hover .card:hover {
-  background-color: #f0f0f0;
-}
-
 .naslov {
   font-family: "Electrolize", sans-serif;
   margin-top: 30px;
@@ -103,58 +94,9 @@ body {
 
 .blijedi {
   font-size: 20px;
-  margin-top: 70px;
   margin-bottom: 20px;
   margin-left: 20px;
   font-family: "Electrolize", sans-serif;
-}
-
-.buttoni {
-  color: white;
-  background-color: black;
-  font-size: 25px;
-  border: none;
-  padding: 5px 30px;
-  margin: 10px;
-  font-weight: bold;
-  font-family: "Electrolize", sans-serif;
-}
-.buttoni:hover {
-  color: black;
-  background-color: #2c2c99;
-  transition: box-shadow 0.3s ease;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-.success-message {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-#newsletter-checkbox:checked ~ .success-message {
-  display: flex;
-  flex-direction: column;
-}
-
-.close-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 10px;
-}
-.close-button:hover {
-  background-color: #45a049;
 }
 
 #pozadinski {
@@ -196,19 +138,5 @@ body {
 @media screen and (max-width: 430px) {
   .okvir .blijedi {
     font-size: 12px;
-    margin: 40px 0 10px;
-  }
-  .okvir .holder img {
-    height: 120px;
-    width: 60px;
-    margin: 5px;
-    margin-bottom: 0;
-  }
-  .okvir .holder2 img {
-    height: 150px;
-    width: 150px;
-    margin: 5px;
-    margin-bottom: 0;
-    flex-grow: unset;
   }
 }/*# sourceMappingURL=sass.css.map */

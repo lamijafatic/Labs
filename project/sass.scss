@@ -29,7 +29,7 @@ $btn-font-size: 25px;
 
 .container {
    
-    padding: $container-padding;
+
     border-radius: $container-border-radius;
     
     max-width: $container-max-width;
@@ -94,14 +94,7 @@ nav {
     padding-bottom: 1px;
 }
 
-.card-link:hover .card {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
 
-    &:hover {
-        background-color: #f0f0f0;
-    }
-}
 
 .naslov {
     font-family: $font-family;
@@ -148,61 +141,10 @@ body {
 
 .blijedi {
     font-size: 20px;
-    @include margin(70px);
+
     margin-bottom: 20px;
     margin-left: 20px;
     font-family: $font-family;
-}
-
-.buttoni {
-    color: white;
-    background-color: black;
-    font-size: 25px;
-    border: none;
-    padding: 5px 30px;
-    margin: 10px;
-    font-weight: bold;
-    font-family: $font-family;
-
-    &:hover {
-        color: black;
-        background-color: $primary-color;
-        transition: box-shadow 0.3s ease;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    }
-}
-
-.success-message {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-
-    #newsletter-checkbox:checked ~ & {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.close-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 10px;
-
-    &:hover {
-        background-color: #45a049;
-    }
 }
 
 #pozadinski {
@@ -210,7 +152,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-// Definiranje varijabli
+
 $font-electrolize: 'Electrolize', sans-serif;
 $font-lucida-handwriting: 'Lucida Handwriting';
 $color-black: black;
@@ -246,6 +188,7 @@ $font-size-okvir-p: 16px;
         img {
             display: none;
         }
+      
     }
    
     
@@ -261,22 +204,9 @@ $font-size-okvir-p: 16px;
     @media screen and (max-width: 430px) {
         .blijedi {
             font-size: 12px;
-            margin: 40px 0 10px;
+            
         }
 
-        .holder img {
-            height: 120px;
-            width: 60px;
-            margin: 5px;
-            margin-bottom: 0;
-        }
-
-        .holder2 img {
-            height: 150px;
-            width: 150px;
-            margin: 5px;
-            margin-bottom: 0;
-            flex-grow: unset;
-        }
+       
     }
 }

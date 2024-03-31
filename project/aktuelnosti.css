@@ -1,4 +1,21 @@
-
+.carousel-item img {
+    width: 70vw; 
+    max-height: 80vh;
+    margin: auto;
+  }
+  .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .carousel {
+    max-width: 90%;
+    margin: auto; 
+  }
 
 nav li{
     display:inline;
@@ -88,22 +105,8 @@ body{
     padding:0;
     margin:0;
 }
-.drzac_slika{
-    display:flex;
-    margin-bottom:40px;
 
-}
-.drzac_slika img{
-    flex-grow: 1;
-    height:30px;
-    width:50px;
-    margin:5px;
-}
-.okvirovi{
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
 
-    
-}
 body{
     background-image: url("atom333.png");
 
@@ -112,17 +115,8 @@ body{
    
     
 }
-.holder{
-    display: flex;
-}
-.holder img{
-    flex-grow: 1;
-    height:420px;
-    width:10px;
-    margin:20px;
-    margin-bottom:0px;
-    margin-top:0;
-}
+
+
 .card {
     margin-bottom: 20px;
     margin-top:10px;
@@ -140,80 +134,8 @@ body{
     max-height: 100px;
     overflow: hidden;
 }
-.holder2{
-    display: flex;
-    width:900px;
-    margin:auto;
-    
-}
-.holder2 img{
-    flex-grow: 1;
-    height:420px;
-  width:50px;
-    margin:20px;
-    margin-bottom:0px;
-   
-}
-.blijedi{
-    
-    font-size: 20px;
-    margin:70px;
-    margin-bottom:20px;
-    font-family: 'Electrolize',sans-serif;
-}
-.buttoni{
 
-color:white;
-background-color: black;
-font-size: 25px;
-border:none;
-padding-right:30px;
-padding-left: 30px;
-padding-top:5px;
-padding-bottom: 5px;
 
-margin:10px;
-font-weight: bold;
-font-family: 'Electrolize',sans-serif;
-}
-.buttoni:hover{
-    color:black;
-    background-color:#2c2c99;
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); 
-}
-.success-message {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-#newsletter-checkbox:checked ~ .success-message {
-    display: flex;
-    flex-direction: column;
-}
-
-.close-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.close-button:hover {
-    background-color: #45a049;
-}
 .okvir span{
     font-family: 'Electrolize', sans-serif; 
     font-size: 50px; 
@@ -248,31 +170,13 @@ font-family: 'Electrolize',sans-serif;
 }
 
 @media screen and (max-width:430px) {
-    .blijedi {
-        font-size: 12px; 
-        margin:40px;
-    margin-bottom:10px;
-    }
+   
     .naslov{
         margin-left:20px;
     margin-top:30px;
     font-size: 30px;
     }
-    .holder img {
-        height: 120px;
-        width:60px;
-        margin:5px;
-        margin-bottom: 0px;
-       
-    }
-    .holder2 img {
-        height: 150px;
-        width:150px;
-        margin:5px;
-        margin-bottom: 0px;
-        flex-grow: unset;
- 
-    }
+    
     .carousel-caption p {
    
         display: none;
@@ -322,5 +226,11 @@ font-family: 'Electrolize',sans-serif;
     }
 }
 footer{
-    background-color:#2c2c99; color:black; padding: 20px;font-size:15px;  text-align: center;font-family:'Electrolize',sans-serif;font-weight: bold;
+    background-color:#2c2c99; 
+    color:black; 
+    padding: 20px;
+    font-size:15px; 
+     text-align: center;
+     font-family:'Electrolize',sans-serif;
+     font-weight: bold;
 }
