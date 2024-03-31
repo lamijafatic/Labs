@@ -1,0 +1,46 @@
+body {
+  background-image: url("formule3.jpg");
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+.glavni-div {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.mali {
+  background-color: #2c2c99;
+  color: #fff;
+  font-family: "Electrolize";
+  font-size: 25px;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+#id {
+  font-family: "Lucida Handwriting";
+}
+
+.mali img {
+  width: 200px;
+  height: auto;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .mali {
+    font-size: 16px;
+    padding: 20px;
+  }
+  #id {
+    font-size: 18px;
+  }
+  .mali img {
+    width: 150px;
+  }
+}/*# sourceMappingURL=edukacije.css.map */

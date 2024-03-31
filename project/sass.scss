@@ -5,7 +5,7 @@ $btn-background: #cdd0d0;
 $btn-background-hover: #1925cf;
 $form-border-color: #ccc;
 $error-color: red;
-$container-bg: #e7e7e7;
+
 $container-padding: 30px;
 $container-border-radius: 10px;
 $container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -28,10 +28,10 @@ $btn-font-size: 25px;
 }
 
 .container {
-    background-color: $container-bg;
+   
     padding: $container-padding;
     border-radius: $container-border-radius;
-    box-shadow: $container-box-shadow;
+    
     max-width: $container-max-width;
     font-family: $font-family;
     width: 100%;
@@ -105,8 +105,9 @@ nav {
 
 .naslov {
     font-family: $font-family;
-    @include margin(50px null null 40px);
+    @include margin(30px);
     font-size: 45px;
+    margin-left: 20px;
     font-weight: bold;
 }
 
@@ -126,19 +127,9 @@ nav a {
     }
 }
 
-header h1 {
-    font-family: $font-family;
-    font-size: 70px;
-    padding: 0;
-    margin: 0;
-    margin-left: 20px;
-    color: black;
-}
 
-header span {
-    font-family: "Lucida Handwriting";
-    font-size: 20px;
-}
+
+
 
 header {
     background-color: $primary-color;
@@ -159,6 +150,7 @@ body {
     font-size: 20px;
     @include margin(70px);
     margin-bottom: 20px;
+    margin-left: 20px;
     font-family: $font-family;
 }
 
@@ -217,4 +209,74 @@ body {
     background-image: url("atom333.png");
     background-size: cover;
     background-repeat: no-repeat;
+}
+// Definiranje varijabli
+$font-electrolize: 'Electrolize', sans-serif;
+$font-lucida-handwriting: 'Lucida Handwriting';
+$color-black: black;
+$color-white: white;
+$font-size-okvir-span: 50px;
+$font-size-okvir-p: 16px;
+
+.okvir {
+    span {
+ font-family: $font-lucida-handwriting;
+        font-family: $font-electrolize;
+        font-size: $font-size-okvir-span;
+        font-weight: bold;
+        color: $color-black;
+        padding-left: 50px;
+        margin-right: 20px;
+    }
+
+    p {
+        
+        font-family: $font-lucida-handwriting;
+        font-size: $font-size-okvir-p;
+        color: $color-white;
+        margin: 0;
+    }
+
+    @media screen and (max-width: 425px) {
+         span {
+            font-size: 40px;
+            padding-left: 0px;
+        }
+
+        img {
+            display: none;
+        }
+    }
+   
+    
+    @media screen and (min-width:425px) {
+        span
+         {
+           font-size: 40px;
+           padding-left: 0px;
+        }
+        
+    }
+
+    @media screen and (max-width: 430px) {
+        .blijedi {
+            font-size: 12px;
+            margin: 40px 0 10px;
+        }
+
+        .holder img {
+            height: 120px;
+            width: 60px;
+            margin: 5px;
+            margin-bottom: 0;
+        }
+
+        .holder2 img {
+            height: 150px;
+            width: 150px;
+            margin: 5px;
+            margin-bottom: 0;
+            flex-grow: unset;
+        }
+    }
 }

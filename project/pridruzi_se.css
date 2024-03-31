@@ -194,3 +194,69 @@ font-family: 'Electrolize',sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+header{
+    background-color:#2c2c99;
+    padding:5px;
+    margin:0px;
+}
+header span,h1{
+    padding-left:15px;
+    
+}
+  
+.okvir span{
+    font-family: 'Electrolize', sans-serif; 
+    font-size: 50px; 
+    font-weight: bold; 
+    color: black;
+    padding-left:50px;
+    margin-right:20px;
+}
+.okvir p{
+    font-family: 'Lucida Handwriting';
+    font-size: 16px; 
+    color: white;
+     margin:0px
+}
+@media screen and (max-width:425px) {
+    .okvir span
+     {
+       font-size: 40px;
+       padding-left: 0px;
+    }
+    .okvir img{
+        display: none;
+    }
+}
+@media screen and (min-width:400px) {
+    .okvir span
+     {
+       font-size: 40px;
+       padding-left: 0px;
+    }
+   
+}
+
+@media screen and (max-width:430px) {
+    .blijedi {
+        font-size: 12px; 
+        margin:40px;
+    margin-bottom:10px;
+    }
+    .holder img {
+        height: 120px;
+        width:60px;
+        margin:5px;
+        margin-bottom: 0px;
+        
+    }
+    .holder2 img {
+        height: 150px;
+        width:150px;
+        margin:5px;
+        margin-bottom: 0px;
+        flex-grow: unset;
+        
+    }
+}
