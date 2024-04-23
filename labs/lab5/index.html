@@ -44,20 +44,28 @@
 
 
   function make_table() {
-    const tableBody = document.getElementById('tableBody');
-    tableBody.innerHTML = '';
-    podaci.forEach(user => {
-      const row = document.createElement('tr');
-      row.innerHTML = `
-        <td>${user.id}</td>
-        <td><img src="icon.png" alt="ikonica">${user.name}</td>
-        <td>${user.country}</td>
-        <td>${user.email}</td>
-        <td><button onclick="openModal('${user.name}')">Click</button></td>
-      `;
-      tableBody.appendChild(row);
-    });
+  const tableBody = document.getElementById('tableBody');
+  tableBody.innerHTML = '';
+
+  // Umesto `forEach` petlje koristite `for` petlju
+  for (let i = 0; i < podaci.length; i++) {
+    const korisnik = podaci[i];  // Uzima objekat korisnika na trenutnom indeksu `i`
+    
+    // Kreirajte red (`tr`) za tabelu
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${korisnik.id}</td>
+      <td><img src="icon.png" alt="ikonica">${korisnik.name}</td>
+      <td>${korisnik.country}</td>
+      <td>${korisnik.email}</td>
+      <td><button onclick="openModal('${korisnik.name}')">Click</button></td>
+    `;
+    
+    // Dodajte red u telo tabele
+    tableBody.appendChild(row);
   }
+}
+
 
 
   function sortTable(column) {
