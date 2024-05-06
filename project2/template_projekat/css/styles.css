@@ -11315,3 +11315,102 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+
+
+
+
+/* Stilizacija za portfolio item */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stilizacija za portfolio link */
+.portfolio-link {
+  display: block;
+  position: relative;
+}
+
+/* Stilizacija za portfolio hover */
+.portfolio-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Promijenite boju prema potrebi */
+  display: none; /* Inicijalno sakriven */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Stilizacija za portfolio hover content */
+.portfolio-hover-content {
+  color: #fff; /* Boja teksta */
+}
+
+/* Stilizacija za portfolio caption */
+.portfolio-caption {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Stilizacija za ikonu plusa */
+.fa-plus {
+  transition: transform 0.3s ease; /* Animacija transformacije */
+}
+
+/* Stilizacija za sliku */
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+/* Stilizacija za naslov */
+.portfolio-caption-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Stilizacija za podnaslov */
+.portfolio-caption-subheading {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Stilizacija za modal */
+#portfolioModal1 {
+  display: none; /* Inicijalno sakriven */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Promijenite boju prema potrebi */
+  z-index: 9999;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Stilizacija za modal sadržaj */
+.portfolio-modal-content {
+  background-color: #fff; /* Boja pozadine */
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+/* Stilizacija za zatvaranje moda */
+.portfolio-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #000; /* Boja ikone */
+}

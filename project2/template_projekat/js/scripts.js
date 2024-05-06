@@ -52,3 +52,32 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var portfolioItem = document.getElementById('portfolioItem1');
+    var portfolioLink = portfolioItem.querySelector('#portfolio-link1');
+    var portfolioModal = document.getElementById('portfolioModal1');
+
+    // Event listener za klik na link
+    portfolioLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Spriječava defaultno ponašanje linka
+        openModal(portfolioModal);
+    });
+
+    // Event listener za prelazak mišem
+    portfolioItem.addEventListener('mouseenter', function() {
+        var portfolioHoverContent = portfolioItem.querySelector('#portfolio-hover-content1');
+        portfolioHoverContent.style.display = 'block';
+    });
+
+    portfolioItem.addEventListener('mouseleave', function() {
+        var portfolioHoverContent = portfolioItem.querySelector('#portfolio-hover-content1');
+        portfolioHoverContent.style.display = 'none';
+    });
+});
+
+// Funkcija za otvaranje modalnog prozora
+function openModal(modal) {
+    modal.style.display = 'block';
+}
