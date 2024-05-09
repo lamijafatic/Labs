@@ -63,7 +63,28 @@ $(function() {
      },
   
    });
- });
+ 
+
+ $("form[name='forma']").submit(function(event) {
+    event.preventDefault(); // Spriječava osvježavanje stranice prilikom submitanja forme
+
+    var formData = $(this).serialize(); // Serijalizacija podataka iz forme
+
+    $.ajax({
+      type: "POST",
+      url: "process_form.php", // Postavite URL vašeg PHP skripta za obradu forme
+      data: formData,
+      success: function(response) {
+        // Ovdje možete manipulirati odgovorom ako je potrebno
+        alert('Forma je uspješno poslana!');
+      },
+      error: function(xhr, status, error) {
+        // Ovdje možete obraditi greške prilikom slanja forme
+        alert('Došlo je do greške prilikom slanja forme: ' + error);
+      }
+    });
+  });
+});
 
 
   </script>
