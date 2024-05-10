@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Midterm Exam 2024</title>
+    <link
+      rel="stylesheet"
+      href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous" e+
+    />
+    <style>
+      .panel {
+        min-height: 390px;
+      }
+    </style>
+
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZh3w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Midterm Exam</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+      <div class="jumbotron">
+        <h1>
+          Welcome to Midterm Makeup Exam at course Foundations of Frontend Web Development
+        </h1>
+        <p>
+          This is skeleton project to save you time on exam. You have to
+          populate missing snippet codes to make this project functional.
+        </p>
+        <h3>Following parts should be completed:</h3>
+        <ul>
+          <li>
+            1. Use Javascript to implement tasks in TODO #1
+          </li>
+          <li>
+            2. Add bootstrap modal as explained within TODO #2
+          </li>
+          <li>
+            3. Load style.css file and add tasks from TODO #3 to it
+          </li>
+          <li>4. Zip your code and upload to LMS quiz assignment.</li>
+        </ul>  
+      </div>
+      <table id="employees"></table>
+
+      <!--TODO #2 Add bootstrap modal with header, body and footer of modal.
+        In footer you should add your name and surname
+        6 points      
+      -->
+
+      </div>
+    </div>
+  </body>
+
+  <script>
+    /*TODO #1
+     * Load data from array employees to table with id=employees
+     * Table should contain header row with column names: Name, Position, City, Date, Salary and MoreInfo
+     * Each row should contain one array element from employees array
+     * MoreInfo column should contain button 'See more info' and id of button should be details
+     * When button is clicked bootstrap modal should be displayed.
+     * Within modal there should be writen sentence [Name] works as [Position] in [City] and has [Salary] where Name, Position, City and Salary 
+     * should be replaced by the values from selected row.
+     * Add one more row at the end of table (which will be one column) to show sum of salaries of all employees in a form of [sum]$ 
+     * 
+     * 40 points
+     */
+
+    let employees = [
+        [ "Tiger Nixon", "System Architect", "Edinburgh", "2011/04/25", "$320,800"],
+        [ "Garrett Winters", "Accountant", "Tokyo", "2011/07/25", "$170,750" ],
+        [ "Ashton Cox", "Junior Technical Author", "San Francisco", "2009/01/12", "$86,000" ],
+        [ "Cedric Kelly", "Senior Javascript Developer", "Edinburgh", "2012/03/29", "$433,060" ],
+        [ "Airi Satou", "Accountant", "Tokyo", "5407", "$162,700" ],
+        [ "Brielle Williamson", "Integration Specialist", "New York", "2012/12/02", "$372,000" ]
+    ];
+
+    /*TODO #3
+     * Table should have solid 2px blue borders.
+     * Header columns should be red and centered.
+     * Title in bootstrap modal should be italic and with font size 28px
+     * These properties should be defined in .css file
+     * If screen is small, less than 845px button should have red color of letters
+     * and if it is larger color should be white 
+     * 20 points
+    */
+    
+  </script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <h1>Table (Task 2)</h1>
+    <table id="tabela">
+
+
+
+
+    </table>
+    <style>
+        
+        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
+#tabela th, #tabela td {
+  
+    padding: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Lucida Handwriting";
+}
+
+#tabela th {
+    text-align: left;
+}
+
+
+    </style>
+
+    <script>
+     
+     $(document).ready(function() {
+    $.ajax({
+        url: 'https://ipapi.co/json/',
+        type: 'get',
+        dataType: 'json',
+        error: function(xhr, status, error) {
+            console.error("Error fetching data:", error);
+        },
+        success: function(data) {
+            var keys = Object.keys(data); 
+
+            
+            var table = $('<table>');
+
+            $.each(keys, function(index, key) {
+                var tr = $('<tr>');
+                tr.append('<td>' + key + '</td>');
+                tr.append('<td>' + data[key] + '</td>');
+                table.append(tr);
+            });
+
+          
+            $('#tabela').append(table);
+        }
+    });
+});
+
+</script>
+
+   
+
+
+
+
+
+
+
+  </body>
+</html>
+
+

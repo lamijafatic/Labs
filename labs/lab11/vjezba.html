@@ -11,15 +11,6 @@
   <body>
     <h1>Table (Task 1)</h1>
     <table id="tabela" data-url="students.json" style="border-collapse: collapse;">
-        <thead>
-            <tr>
-                  <th data-field:"code">CODE</th>
-                  <th data-field:"name">NAME</th>
-
-
-            </tr>
-        </thead>
-        
 
 
 
@@ -45,10 +36,33 @@ $(document).ready(function() {
             console.error("Error fetching data:", error);
         },
         success: function(data) {
+            var keyNum = Object.keys(data[0]).length; /* broj keyova, svejedno 0,1,2... ista duyina*/
+            var keys = Object.keys(data[0]); // pravi arraz keysa
+            var thead = $('<thead>');
+            var trHeader = $('<tr>');
+
+
+            for (var i = 0; i < keyNum; i++) {
+                trHeader.append('<th>' + keys[i] + '</th>');
+            }
+
+            thead.append(trHeader);
+            $('#tabela').append(thead);
+
+
+
             $.each(data, function(index, item) {
                 var tr = $('<tr>');
-                tr.append('<td>' + item.code + '</td>');
-                tr.append('<td>' + item.name + '</td>');
+
+                var values = Object.values(item); //array values
+
+                
+                    
+                    for (var j = 0; j < values.length; j++) {
+                        tr.append('<td>' + values[j] + '</td>');
+                    }
+                
+
                 $('#tabela').append(tr);
             });
         }
