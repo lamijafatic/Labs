@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.form-horizontal label {
+  font-weight: bold;
+}
+.form-horizontal .form-group {
+  margin-bottom: 20px;
+}
+.form-horizontal .form-group .control-label {
+  margin-bottom: 10px;
+}
+.form-horizontal .form-group .input-group .input-group-addon {
+  background-color: yellow;
+  border: none;
+  color:red;
+}
+.form-horizontal .form-group .input-group input[type=text] .form-control,
+.form-horizontal .form-group .input-group input[type=password] .form-control,
+.form-horizontal .form-group .input-group input[type=email] .form-control {
+  border-color: rgba(165, 42, 42, 0.773);
+}
+.form-horizontal .form-group .input-group input[type=text] .form-control:focus,
+.form-horizontal .form-group .input-group input[type=password] .form-control:focus,
+.form-horizontal .form-group .input-group input[type=email] .form-control:focus {
+  border-color: brown;
+  box-shadow: none;
+}/*# sourceMappingURL=proba.css.map */

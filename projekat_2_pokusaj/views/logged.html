@@ -1,0 +1,152 @@
+<link rel="stylesheet" href="./styles/home.css"> 
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+<link href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css" rel="stylesheet">
+<style>
+
+.admin-page{
+    background-image:url('./images/formule3.jpg');
+    background-size: cover;
+    padding:0;
+    margin:0;
+    height:100%;
+}
+
+</style>
+   
+
+
+
+<div class="admin-page">
+<div class="container">
+    <h1></h1>
+    <!--Table-->
+    <table id="students" class="display" style="width: 100%;"></table>
+    <!-- Modal -->
+    <div class="modal" id="editModal" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Student</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="surname">Surname:</label>
+                            <input type="text" class="form-control" id="surname" name="surname">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Email:</label>
+                            <input type="text" class="form-control" id="email" name="email">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeModalButton">Close</button>
+                    <button type="button" class="btn btn-primary"  id="saveChangesButton" >Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        console.log('jj')
+        fetchStudentsFromFile();
+
+        function fetchStudentsFromFile() {
+            $.ajax({
+                url: './data/korisnici.json',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    let html = "<thead><tr><th>Name</th><th>Surname</th><th>Email</th><th>Actions</th></tr></thead><tbody>";
+                    data.forEach(student => {
+                        html += '<tr><td>'+student.name+'</td><td>'+student.surname+'</td><td>'+student.email+'</td>'+
+                            '<td><button class="editButton" data-student-id="'+student.id+'">Edit</button>  <button class="viewMore" data-student-id="'+student.id+'">View more</button></td></tr>';
+                    });
+                    html += "</tbody>";
+                    $("table#students").html(html);
+                    $("table#students").DataTable();
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error fetching data from file:', error);
+                }
+            });
+        }
+        $(document).on('click', '.viewMore', function() {
+          
+                localStorage.removeItem('selectedStudentId');
+                localStorage.clear();
+        // Dohvaćamo ID korisnika iz data atributa dugmeta
+      
+        var studentId = $(this).data('student-id');
+        
+        // Spremamo ID korisnika u lokalno skladište
+        localStorage.setItem('selectedStudentId', studentId);
+        
+        // Preusmjeravamo korisnika na novu stranicu
+        window.location.href = '#viewmore'; 
+        location.reload();// Promijenite ovu liniju prema stvarnom imenu vaše stranice
+    });
+
+     
+        $(document).on('click', '.editButton', function() {
+            var studentId = $(this).data('student-id');
+         
+            $.blockUI({ message: '<h3>Processing...</h3>' });
+            $('#editModal').show();
+            getStudentById(studentId);   
+        });
+        $(document).on('click','#saveChangesButton',function(){
+
+            toastr.success('Changes saved!');
+            $('#editModal').hide();
+
+
+        });
+        $(document).on('click','#closeModalButton',function(){
+
+toastr.warning('Changes are not saved!');
+
+});
+
+        function getStudentById(id) {
+    $.ajax({
+        url: './data/korisnici.json',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          
+            var student = data.find(student => student.id === id);
+
+            if (student) {
+          
+                $('input[name="name"]').val(student.name);
+                $('input[name="surname"]').val(student.surname);
+                $('input[name="email"]').val(student.email);
+            } else {
+                console.error('Student with id ' + id + ' not found.');
+            }
+            $.unblockUI();
+        },
+        error: function(xhr, status, error) {
+            console.error('Error fetching data from file:', error);
+            $.unblockUI();
+        }
+    });
+}
+
+
+   
+        $('#closeModalButton').click(function() {
+            $('#editModal').hide();
+        });
+
+    });
+</script>

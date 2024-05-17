@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/sass.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+    <title>Pridruzi se</title>
+   
+    
+</head>
+<body>
+  <script>
+
+/*Form validation */
+
+
+$(function() {
+   
+   $("form[name='forma']").validate({
+ 
+     rules: {
+      
+       ime: "required",
+       prezime: "required",
+       grad: "required",
+       datumrodenja: "required",
+       drzava:"required",
+       
+     obrazovanje:"required",
+       mail: {
+         required: true,
+         email: true
+       },
+       telefon: {
+         required: true,
+         minlength: 8
+       },
+       obrazovanje: "required",
+       cv:"required"
+
+     },
+
+     messages: {
+       ime: "Please enter your first name",
+       prezime: "Please enter your last name",
+       telefon: {
+         required: "Please provide a phone number",
+         minlength: "Your phone number must be at least 8 characters long"
+       },
+       email: "Please enter a valid email address"
+     },
+  
+   });
+ 
+
+ $("form[name='forma']").submit(function(event) {
+    event.preventDefault(); 
+
+    var formData = $(this).serialize(); 
+
+    $.ajax({
+      type: "POST",
+      url: "nesto.php", 
+      data: formData,
+      success: function(response) {
+        
+        alert('Forma je uspješno poslana!');
+      },
+      error: function(xhr, status, error) {
+      
+        alert('Došlo je do greške prilikom slanja forme: ' + error);
+      }
+    });
+  });
+});
+
+
+  </script>
+    
+
+
+
+    
+    
+    
+    
+    
+    
+    
+   
+    
+
+    
+       <div id="pozadinski">
+        <h2 class="naslov">Postani član </h2>
+        <p class="blijedi">Svaka četiri mjeseca vrši se selekcija novih članova udruženja na osnovu aplikacija, iskustva,motivacionog pisma i intervjua uživo. Svaka selekcija nudi dobrodošlicu 10 novim članovim udruženja i vrši se 10.01 , 10.05, 10.09.<br>
+        Članovi udruženja mogu biti studenti tehničkih i prirodnih nauka te istaknuti entuzijasti drugih fakulteta, mladi istraživači, diplomirani inžinjeri i stručnjaci u polju fizike,hemije,matematike,bioogije i elektrotehnike. Također se ohrabruju i svi ostali zaljubljenici u nauku da nam se pridruže i rade na svojim idejama.<br>
+   <br> Ako te zanima nauka, želiš da unaprijediš svoje znanje ili budeš dio tima istraživača i predstaviš svoje ideje, pridruži nam se.<br>
+Sve dodatne informacije možete dobiti na :<span style="font-weight: bold;"> nikolatesla_bg_info@gmail.com </span></p>
+
+<div class="container">
+   <div style="background-color:#2c2c99; color:white;"><h1>Prijava</h1></div>
+    <form id="registration-form" action="#" method="POST" name="forma">
+      <div class="form-group">
+        <label for="ime"><i class="fas fa-user"></i> Ime:</label>
+        <input type="text" id="ime" name="ime"  >
+      </div>
+      <div class="form-group">
+        <label for="prezime"><i class="fas fa-user"></i> Prezime:</label>
+        <input type="text" id="prezime" name="prezime"  >
+      </div>
+      <div class="form-group">
+        <label for="datum-rodenja"><i class="fas fa-calendar-alt"></i> Datum rođenja:</label>
+        <input type="datetime-local" id="datum-rodenja" name="datumrodenja"  >
+      </div>
+      <div class="form-group">
+        <label for="grad"><i class="fas fa-city"></i> Grad:</label>
+        <input type="text" id="grad" name="grad"  >
+      </div>
+      <div class="form-group">
+        <label for="drzava"><i class="fas fa-globe"></i> Država:</label>
+        <input type="text" id="drzava" name="drzava"  >
+      </div>
+      <div class="form-group">
+        <label for="telefon"><i class="fas fa-phone"></i> Broj telefona:</label>
+        <input type="tel" id="telefon" name="telefon">
+      </div>
+      <div class="form-group">
+        <label for="mail"><i class="fas fa-envelope"></i> Mail:</label>
+        <input type="email" id="mail" name="mail"  >
+      </div>
+      <div class="form-group">
+        <label for="zaposlen"><i class="fas fa-briefcase"></i> Zaposlen:</label>
+        <select id="zaposlen" name="zaposlen"  >
+          <option value="da">Da</option>
+          <option value="ne">Ne</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="obrazovanje"><i class="fas fa-graduation-cap"></i> Nivo obrazovanja:</label>
+        <select id="obrazovanje" name="obrazovanje"  >
+          <option value="bachelor">Bachelor</option>
+          <option value="master">Master</option>
+          <option value="phd">PhD</option>
+          <option value="srednja">Srednja škola</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="institucija"><i class="fas fa-university"></i> Naziv obrazovne institucije:</label>
+        <input type="text" id="institucija" name="institucija"  >
+      </div>
+      <div class="form-group">
+        <label for="cv"><i class="fas fa-file"></i> CV:</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx"  >
+      </div>
+      <div class="form-group">
+        <label for="motivaciono-pismo"><i class="fas fa-file-alt"></i> Motivaciono pismo:</label>
+        <textarea id="motivaciono-pismo" name="motivaciono-pismo" rows="4"  ></textarea>
+      </div>
+      <button type="submit" class="btn">Pošalji</button>
+    </form>
+  </div>
+         <p class="blijedi">Izabrani kandidati će biti kontaktirani putem emaila.</p>  
+       </div>
+       
+      
+      
+    
+      <br>
+        
+
+    
+    <footer style="background-color:#2c2c99; color:black; padding: 20px;font-size:15px;  text-align: center;font-family:'Electrolize',sans-serif;font-weight: bold;">
+        
+   
+        <div class="footer-content">
+            <p>Adresa: Daruvarska 43,Beograd</p>
+            <p>Telefon: +381 647 889</p>
+            <p>Email: udruzenje_tesla@gmail.com</p>
+            <p> Naučno udruženje   N i k o l a    T e s l a</p>
+        </div>
+    
+    <hr>
+    </footer>
+   
+
+
+    
+
+
+
+
+
+</body>

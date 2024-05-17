@@ -1,0 +1,648 @@
+
+nav li{
+    display:inline;
+    margin-right:20px;
+}
+nav ul{
+    text-align: right;
+}
+
+.okvir{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.navbar {
+   margin-left: 0px;
+}
+
+
+  
+  
+.okvir span{
+    font-family: 'Electrolize', sans-serif; 
+    font-size: 50px; 
+    font-weight: bold; 
+    color: black;
+    padding-left:50px;
+    margin-right:20px;
+}
+.okvir p{
+    font-family: 'Lucida Handwriting';
+    font-size: 16px; 
+    color: white;
+     margin:0px
+}
+nav{
+    padding-bottom:1px;
+}
+.card-link:hover .card {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+
+}
+.card-link:hover .card {
+    background-color: #f0f0f0;
+}
+
+.naslov{
+    font-family: 'Electrolize',sans-serif;
+    margin:10px;
+    font-size: 45px;
+    font-weight: bold;
+}
+#pridruzi_se{
+    text-decoration: none;
+    color:white;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    background-image: url("../images/formule2.jpg");
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item img {
+    max-width: 100%; 
+    height:auto;
+}
+
+iframe{
+    display: block;
+    margin:auto;
+    width:80%;
+    height:500px;
+    padding:10px;
+    border: none;
+}
+nav a{
+    color:white;
+    text-decoration:bold;
+    font-family:'Electrolize',sans-serif; 
+    font-size: 20px;
+    text-decoration: none;
+    padding:5px;
+   
+}
+nav a:hover{
+    color:white;
+    text-decoration:bold;
+    font-family:'Electrolize',sans-serif; 
+    font-size: 25px;
+    text-decoration: none;
+    padding:5px;
+    font-weight: bold;
+    
+}
+header{
+    background-color:#2c2c99;
+    padding:5px;
+    margin:0px;
+}
+header span,h1{
+    padding-left:15px;
+    
+}
+body{
+    padding:0;
+    margin:0;
+}
+.drzac_slika{
+    display:flex;
+    margin-bottom:40px;
+
+}
+.drzac_slika img{
+    flex-grow: 1;
+    height:30px;
+    width:50px;
+    margin:5px;
+}
+.okvirovi{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
+
+    
+}
+
+.blijedi{
+    opacity: 0.5; 
+    font-size: 20px;
+    padding:8px;
+}
+.buttoni{
+
+color:white;
+background-color: black;
+font-size: 25px;
+border:none;
+padding-right:30px;
+padding-left: 30px;
+padding-top:5px;
+padding-bottom: 5px;
+
+margin:10px;
+font-weight: bold;
+font-family: 'Electrolize',sans-serif;
+}
+.buttoni:hover{
+    color:black;
+    background-color:#2c2c99;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); 
+}
+.success-message {
+    display: none;
+    background-color: rgba(0, 244, 65, 0.5);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#newsletter-checkbox:checked ~ .success-message {
+    display: flex;
+    flex-direction: column;
+}
+
+.close-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.close-button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width:320px) {
+    .okvir span
+     {
+       font-size: 40px;
+       padding-left: 0px;
+    }
+    .okvir img{
+        display: none;
+    }
+}
+@media screen and (min-width:375px) {
+    .okvir span
+     {
+       font-size: 40px;
+       padding-left: 0px;
+    }
+
+}
+/*--------------------------------------------------*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin:auto;
+    width:auto;
+    margin-bottom: 70px;
+    background-color: white;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color:#2c2c99;
+  }
+  .okvir span{
+    font-family: 'Electrolize', sans-serif; 
+    font-size: 50px; 
+    font-weight: bold; 
+    color: black;
+   
+    margin-right:20px;
+}
+.okvir p{
+    font-family: 'Lucida Handwriting';
+    font-size: 16px; 
+    color: white;
+     margin:0px
+}
+.card-link:hover .card {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+
+}
+.card-link:hover .card {
+    background-color: #f0f0f0;
+}
+
+
+
+.drzac_slika{
+    display:flex;
+    margin-bottom:40px;
+
+}
+.drzac_slika img{
+    flex-grow: 1;
+    height:30px;
+    width:50px;
+    margin:5px;
+}
+.okvirovi{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
+
+    
+}
+#pozadinski{
+    background-image: url("../images/atom333.png");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
+}
+.holder{
+    display: flex;
+}
+.holder img{
+    flex-grow: 1;
+    height:420px;
+    width:10px;
+    margin:20px;
+    margin-bottom:0px;
+    margin-top:0;
+}
+
+.holder2{
+   
+    
+    margin:auto;
+    text-align: center;
+    
+}
+.holder2 img{
+  
+    height:420px;
+  width:400px;
+   margin:10px;
+    margin-bottom:0px;
+   
+}
+.blijedi{
+    
+    font-size: 20px;
+    margin:70px;
+    margin-bottom:20px;
+    font-family: 'Electrolize',sans-serif;
+}
+@media screen and (max-width:430px) {
+    .blijedi {
+        font-size: 12px;
+        margin:40px;
+    margin-bottom:10px;
+    }
+    .holder img {
+        height: 120px;
+        width:60px;
+        margin:5px;
+        margin-bottom: 0px;
+       
+    }
+    .holder2 img {
+        height: 150px;
+        width:150px;
+        margin:5px;
+        margin-bottom: 0px;
+        flex-grow: unset;
+      
+    }
+    .naslov{
+        margin-left:20px;
+    margin-top:30px;
+    font-size: 30px;
+}
+   
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.carousel-item img {
+    width: 70vw; 
+    max-height: 80vh;
+    margin: auto;
+  }
+  .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0 !important;
+    width: 100%;
+  }
+  .carousel {
+    max-width: 90%;
+    margin: auto; 
+  }
+  body{
+    background-image: url("../images/atom333.png");
+
+    background-size: cover;
+    background-repeat:repeat;
+   
+    
+}
+.drzacc{
+background-image: url("../images/atom333.png");
+
+background-size: cover;
+background-repeat:repeat;
+}
+.card1 {
+    margin-bottom: 20px;
+    margin-top:10px;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+   
+   
+  }
+  .card1-link:hover .card {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+
+}
+.card1-link:hover .card1 {
+    background-color: #f0f0f0;
+}
+.card1 img{
+  height: 150px;
+  width:255px;
+}
+.card1-body{
+    height:200px !important;
+}
+.card1-text{
+    height:100px;
+    max-height: 100px;
+    overflow: hidden;
+    padding:5px;
+}
+
+/*--------------------------------------------------------*/
+.gallery{
+    text-align: center;
+}
+.grid {
+    display: grid;
+    margin:auto;
+ 
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 80%;
+   
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: 400px;
+    transition: filter 0.3s;
+  }
+  
+  .grid-item img:hover {
+    filter: blur(3px);
+    cursor: pointer;
+  }
+  
+  .modal-content2 {
+
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  
+  }
+  
+  .modal2 {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .close {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  
+  .toggle-button {
+    appearance: none;
+    background-color: #ccc;
+    border: none;
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .toggle-button::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 1px;
+    left: 1px;
+    transition: 0.3s;
+  }
+  
+
+  
+  .dark-mode  {
+    color: #fff;
+    background-color: #333;
+    
+  }
+  
+  .dark-mode .toggle-button {
+    background-color: #333;
+  }
+  
+  .dark-mode .toggle-button::before {
+    left: calc(100% - 29px);
+  }
+  .card1-body {
+    color: black !important;
+    background-color:white !important;
+  }
+  
+ 
+  .accordion {
+    max-width: 100%;
+  margin-top: 10px;
+    font-family: 'Electrolize', sans-serif; 
+    background-image: url("../images/faq_pozadina.jpg")!important;
+    background-size: cover;
+    padding:80px;
+    height:(100vh+20px);
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ccc;
+    margin:20px;
+}
+.dark-mode2{
+    background-image: none !important;
+}
+.accordion span{
+    font-size: 45px !important;
+   color: #2c2c99;
+}
+.accordion p{
+    font-size:40px;
+    color:black;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.accordion-title {
+    background-color:#2c2c99;
+    color:black;
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 25px; /* Larger font size */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-title.active {
+    background-color:#2c2c9981; /* Light blue */
+}
+
+.accordion-content {
+    padding: 15px;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white */
+    font-size: 18px; /* Larger font size */
+}
+
+.accordion-content.show {
+    display: block;
+}
+.opisi{
+    position:absolute;width:300px;
+    color:white;
+  
+    ;padding-left:10px;
+    padding-top:10px;
+    font-size:16px;
+    font-weight: bold;
+    color:black;
+    margin-top:20%;
+ font-family: 'Electrolize', sans-serif ;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.blog-header {
+    cursor: pointer;
+}
+
+
+.blog-forma input,textarea{
+
+margin: 5px 0; 
+    padding: 10px; 
+    width: 40%; 
+    box-sizing: border-box; 
+    border-radius: 10px;
+    background-color:#ededed88;
+    font-size: 20px;
+}
+#post{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #2c2c99;
+    border-radius: 10px;
+    width:130px;
+   
+}
+.holder {
+    display: none; /* Koristimo fleksibilne kutije */
+    background-image: url("../images/atom333.png");
+    background-size: cover;
+}
+
+.lijevo {
+    flex: 1; /* Lijevi div zauzima 50% prostora */
+    padding: 20px; /* Dodajemo padding za estetiku */
+}
+
+.desno {
+    flex: 1; /* Desni div zauzima 50% prostora */
+    padding: 20px;
+    display: none; /* Dodajemo padding za estetiku */
+    overflow-y: scroll;
+    max-height:80vh;
+}
+.podaci_blog p{
+    margin:0px;
+    font-size: 15px;
+
+}
+.podaci_blog span{
+    margin:0px;
+    font-size: 20px;
+    font-family:'Electrolize', sans-serif ;
+
+}

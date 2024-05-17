@@ -1,0 +1,141 @@
+<link rel="stylesheet" href="../pridruzi_se.css">
+      
+      <div id="pozadinski">
+        <h2 class="naslov">Postani član </h2>
+        <p class="blijedi">Svaka četiri mjeseca vrši se selekcija novih članova udruženja na osnovu aplikacija, iskustva,motivacionog pisma i intervjua uživo. Svaka selekcija nudi dobrodošlicu 10 novim članovim udruženja i vrši se 10.01 , 10.05, 10.09.<br>
+        Članovi udruženja mogu biti studenti tehničkih i prirodnih nauka te istaknuti entuzijasti drugih fakulteta, mladi istraživači, diplomirani inžinjeri i stručnjaci u polju fizike,hemije,matematike,bioogije i elektrotehnike. Također se ohrabruju i svi ostali zaljubljenici u nauku da nam se pridruže i rade na svojim idejama.<br>
+   <br> Ako te zanima nauka, želiš da unaprijediš svoje znanje ili budeš dio tima istraživača i predstaviš svoje ideje, pridruži nam se.<br>
+Sve dodatne informacije možete dobiti na :<span style="font-weight: bold;"> nikolatesla_bg_info@gmail.com </span></p>
+
+<div class="container">
+   <div style="background-color:#2c2c99; color:white;"><h1>Prijava</h1></div>
+    <form id="registration-form" action="#" method="POST">
+      <div class="form-group">
+        <label for="ime"><i class="fas fa-user"></i> Ime:</label>
+        <input type="text" id="ime" name="ime" required>
+      </div>
+      <div class="form-group">
+        <label for="prezime"><i class="fas fa-user"></i> Prezime:</label>
+        <input type="text" id="prezime" name="prezime" required>
+      </div>
+      <div class="form-group">
+        <label for="datum-rodenja"><i class="fas fa-calendar-alt"></i> Datum rođenja:</label>
+        <input type="date" id="datum-rodenja" name="datum-rodenja" required>
+      </div>
+      <div class="form-group">
+        <label for="grad"><i class="fas fa-city"></i> Grad:</label>
+        <input type="text" id="grad" name="grad" required>
+      </div>
+      <div class="form-group">
+        <label for="drzava"><i class="fas fa-globe"></i> Država:</label>
+        <input type="text" id="drzava" name="drzava" required>
+      </div>
+      <div class="form-group">
+        <label for="telefon"><i class="fas fa-phone"></i> Broj telefona:</label>
+        <input type="tel" id="telefon" name="telefon" required>
+      </div>
+      <div class="form-group">
+        <label for="mail"><i class="fas fa-envelope"></i> Mail:</label>
+        <input type="email" id="mail" name="mail" required>
+      </div>
+      <div class="form-group">
+        <label for="zaposlen"><i class="fas fa-briefcase"></i> Zaposlen:</label>
+        <select id="zaposlen" name="zaposlen" required>
+          <option value="da">Da</option>
+          <option value="ne">Ne</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="obrazovanje"><i class="fas fa-graduation-cap"></i> Nivo obrazovanja:</label>
+        <select id="obrazovanje" name="obrazovanje" required>
+          <option value="bachelor">Bachelor</option>
+          <option value="master">Master</option>
+          <option value="phd">PhD</option>
+          <option value="srednja">Srednja škola</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="institucija"><i class="fas fa-university"></i> Naziv obrazovne institucije:</label>
+        <input type="text" id="institucija" name="institucija" required>
+      </div>
+      <div class="form-group">
+        <label for="cv"><i class="fas fa-file"></i> CV:</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+      </div>
+      <div class="form-group">
+        <label for="motivaciono-pismo"><i class="fas fa-file-alt"></i> Motivaciono pismo:</label>
+        <textarea id="motivaciono-pismo" name="motivaciono-pismo" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn">Pošalji</button>
+    </form>
+  </div>
+         <p class="blijedi">Izabrani kandidati će biti kontaktirani putem emaila.</p>  
+       </div>
+       
+      
+      
+    
+      <br>
+        
+
+    <!-----------------------------ostaje-->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+        
+          <div class="modal-header">
+            <h4 class="modal-title">Prijava uspješna</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+       
+          <div class="modal-body">
+            Uspješno ste se prijavili na naš newsletter. Pratite nas za nadolazeće prilike i događaje.
+          </div>
+          
+         
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <br>
+      <div style="text-align: center;">
+          <button class="buttoni"><a id="pridruzi_se" href="pridruzi_se.html">Pridruži se</a></button>
+      </div>
+  
+  </section>
+  <div class="d-flex justify-content-center align-items-center">
+      <img  style="height:250px; width:250px" src="gif2.gif">
+  </div>    
+
+ 
+  <form action="#" method="post" style="background-color: #333; color: #fff; padding: 20px; margin: 10px; text-align: center;">
+      <label for="email" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px;">Prijavite se na naš newsletter:</label><br>
+      <input type="email" id="email" name="email" placeholder="Unesite svoj e-mail" style="font-size: 18px; padding: 10px; width: calc(100% - 100px); border: 1px solid #ccc; border-radius: 5px; margin-right: 10px;" required>
+      <input type="checkbox" id="newsletter-checkbox" style="display: none;">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="background-color: #4CAF50; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px;">Prijavi se</button>
+      <div class="success-message">
+          <p>Uspješno ste prijavljeni na naš newsletter!</p>
+          <label for="newsletter-checkbox" class="close-button">OK</label>
+      </div>
+  </form>
+
+  
+  <footer style="background-color:#2c2c99; color:black; padding: 20px;font-size:15px;  text-align: center;font-family:'Electrolize',sans-serif;font-weight: bold;">
+      
+ 
+      <div class="footer-content">
+          <p>Adresa: Daruvarska 43,Beograd</p>
+          <p>Telefon: +381 647 889</p>
+          <p>Email: udruzenje_tesla@gmail.com</p>
+          <p> Naučno udruženje   N i k o l a    T e s l a</p>
+      </div>
+  
+  <hr>
+  </footer>

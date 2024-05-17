@@ -1,0 +1,66 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+<script>$(document).ready(function() {
+    // Dohvaćamo ID korisnika iz lokalnog skladišta
+    
+    var selectedStudentId = localStorage.getItem('selectedStudentId');
+    
+    // Ako je ID korisnika prisutan u lokalnom skladištu
+    if (selectedStudentId) {
+        // Ovdje možete izvršiti dodatne akcije, poput dohvaćanja podataka o korisniku
+        // i prikazivanja podataka u tabeli ili na drugi način
+        console.log('Selected student ID:', selectedStudentId);
+        $.ajax({
+            url: './data/korisnici.json',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                // Pronalazimo korisnika s odgovarajućim ID-om
+                var selectedStudent = data.find(student => student.id == selectedStudentId);
+                
+                // Ako je korisnik pronađen
+                if (selectedStudent) {
+                   
+                    // Prikazujemo podatke u tablici
+                    Object.keys(selectedStudent).forEach(key => {
+                        $('#userDetails tbody').append('<tr><td>' + key + '</td><td>' + selectedStudent[key] + '</td></tr>');
+                    });
+                   
+                } else {
+                    console.error('User with ID ' + selectedStudentId + ' not found.');
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error fetching data from file:', error);
+               
+            }
+           
+        });
+        localStorage.removeItem('selectedStudentId');
+                    localStorage.clear();
+        // Očistite lokalno skladište kako ne biste imali stari ID kad korisnik sljedeći put posjeti stranicu
+    
+    } else {
+        // Ako ID korisnika nije prisutan u lokalnom skladištu, možete korisnika preusmjeriti natrag na početnu stranicu ili obavijestiti korisnika
+        console.log('No selected student ID found.');
+        // Ovdje možete dodati redirekciju ili obavijestiti korisnika
+    }
+});
+
+                 
+
+
+
+</script>
+
+<div class="naslov">Podaci o članu</div>
+<table id="userDetails" style="width:70%;">
+    <thead>
+        <tr>
+            <th>Vrsta podatka</th>
+            <th>Podatak</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be dynamically added here -->
+    </tbody>
+</table>
