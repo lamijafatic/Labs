@@ -1,6 +1,14 @@
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+<script src=https://cdn.datatables.net/2.0.3/js/dataTables.min.js></script>
+<link href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="./styles/home.css"> 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-<link href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css" rel="stylesheet">
+
 <style>
 
 .admin-page{
@@ -17,6 +25,7 @@
 
 
 <div class="admin-page">
+    <p class="naslov">Članovi udruženja(baza)</p>
 <div class="container">
     <h1></h1>
     <!--Table-->
@@ -51,11 +60,14 @@
             </div>
         </div>
     </div>
+    <button type="button " class="btn btn-primary" onclick="UserService.logout()">LOGOUT</button>
 </div>
 </div>
 
 <script>
+ 
     $(document).ready(function() {
+   
         console.log('jj')
         fetchStudentsFromFile();
 
@@ -73,27 +85,81 @@
                     html += "</tbody>";
                     $("table#students").html(html);
                     $("table#students").DataTable();
+       
+
                 },
                 error: function (xhr, status, error) {
                     console.error('Error fetching data from file:', error);
                 }
             });
+            
         }
         $(document).on('click', '.viewMore', function() {
-          
-                localStorage.removeItem('selectedStudentId');
-                localStorage.clear();
-        // Dohvaćamo ID korisnika iz data atributa dugmeta
-      
-        var studentId = $(this).data('student-id');
-        
-        // Spremamo ID korisnika u lokalno skladište
-        localStorage.setItem('selectedStudentId', studentId);
-        
-        // Preusmjeravamo korisnika na novu stranicu
-        window.location.href = '#viewmore'; 
-        location.reload();// Promijenite ovu liniju prema stvarnom imenu vaše stranice
-    });
+    // Dohvat ID-a odabranog studenta
+    var studentId = $(this).data('student-id');
+    
+    // Provjeri postoji li stari ID u lokalnom skladištu
+    var oldStudentId = localStorage.getItem('selectedStudentId');
+    if (oldStudentId && oldStudentId !== studentId) {
+        // Ako postoji i razlikuje se od novog ID-a, ukloni stari ID
+        localStorage.removeItem('selectedStudentId');
+    }
+    
+    // Spremi novi ID u lokalno skladište
+    localStorage.setItem('selectedStudentId', studentId);
+    
+    // Preusmjeri korisnika na novu stranicu ili obavijesti ih o promjeni
+    window.location.href = '#viewmore';
+
+    $(document).ready(function() {
+  
+  var selectedStudentId = localStorage.getItem('selectedStudentId');
+
+  console.log("nesto")
+
+  
+  if (selectedStudentId) {
+      console.log('Selected student ID:', selectedStudentId);
+      $.ajax({
+          url: './data/korisnici.json',
+          type: 'GET',
+          dataType: 'json',
+          success: function(data) {
+
+              console.log(localStorage.getItem('selectedStudentId'))
+              
+              var selectedStudent = data.find(student => student.id == localStorage.getItem('selectedStudentId'));
+
+              console.log("student:", selectedStudent)
+
+              
+              if (selectedStudent) {
+
+                $('#userDetails tbody').empty();
+
+                  Object.keys(selectedStudent).forEach(key => {
+                      $('#userDetails tbody').append('<tr><td>' + key + '</td><td>' + selectedStudent[key] + '</td></tr>');
+                  });
+
+                  
+                //   localStorage.removeItem('selectedStudentId');
+
+                  console.log(selectedStudent)
+              } else {
+                  console.error('User with ID ' + selectedStudentId + ' not found.');
+              }
+          },
+          error: function(xhr, status, error) {
+              console.error('Error fetching data from file:', error);
+          }
+      });
+  } else {
+      console.log('No selected student ID found.');
+      // Ovdje možete dodati redirekciju ili obavijestiti korisnika
+  }
+});
+});
+
 
      
         $(document).on('click', '.editButton', function() {

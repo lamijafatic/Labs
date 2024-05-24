@@ -114,7 +114,7 @@ $(document).ready(function() {
   });
 });
 
-
+/*
 $(document).ready(function(){
   $(document).on('submit', '.loginForm', function(e) {
   
@@ -133,4 +133,4 @@ $(document).ready(function(){
       alert("Invalid username or password. Please try again.");
     }
   });
-});
+});*/
