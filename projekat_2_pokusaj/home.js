@@ -15,19 +15,19 @@ toastr.info('Obaviještavamo vas da stranica neće raditi od 10.06. do 15.06. zb
 
 
 $(document).ready(function(){
-  // Event delegacija za otvaranje modala na klik slike
+ 
   $(document).on('click', '.grid-item img', function(){
       var imgSrc = $(this).attr('src');
       $('#modal-image2').attr('src', imgSrc);
       $('#modal2').css('display', 'block');
   });
 
-  // Event delegacija za zatvaranje modala pritiskom na gumb za zatvaranje
+
   $(document).on('click', '.close', function(){
       $('#modal2').css('display', 'none');
   });
 
-  // Event delegacija za zatvaranje modala klikom izvan sadržaja moda
+ 
   $(document).on('click', function(event){
       var modal = document.getElementById('myModal2');
       if (event.target == modal) {
@@ -56,7 +56,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function() {
-  // Dodajemo event listener na dokument za slučaj da se elementi dinamički učitavaju
+ 
   $(document).on('click', '#blog-toggle', function() {
       const blogContent = document.getElementById('holder');
       const desni = document.getElementById('desno');
@@ -65,13 +65,13 @@ $(document).ready(function() {
 
       if (blogContent && desni && arrow) {
           if (blogContent.style.display === 'none' || !blogContent.style.display) {
-              blogContent.style.display = 'flex'; // Prikazi sadrzaj bloga
+              blogContent.style.display = 'flex'; 
               desni.style.display = "block";
-              arrow.innerHTML = '&#9660;'; // Promijeni strelicu prema dolje
+              arrow.innerHTML = '&#9660;'; 
           } else {
               blogContent.style.display = 'none';
-              desni.style.display = "none"; // Sakrij sadrzaj bloga
-              arrow.innerHTML = '&#9650;'; // Vrati strelicu prema gore
+              desni.style.display = "none"; 
+              arrow.innerHTML = '&#9650;'; 
           }
       } else {
           console.error('Elementi nisu pronađeni!');
@@ -82,16 +82,16 @@ $(document).ready(function() {
 /*------------------------------------------------------------------------------------------------------------*/
 
 $(document).ready(function() {
-  // Dodajemo event listener na dokument za slučaj da se forma dinamički učita nakon klika
+  
   $(document).on('submit', '.blog-forma', function(e) {
-      e.preventDefault(); // Spriječava osvježavanje stranice prilikom submitanja forme
+      e.preventDefault(); 
 
       const name = document.getElementById('name-form').value;
       const surname = document.getElementById('surname-form').value;
       const comment = document.getElementById('comment-form').value;
       const desnoDiv = document.getElementById('desno');
 
-      // Prikazujemo podatke iz JSON datoteke u desnom divu
+      
       $.ajax({
           url: "./data/blog.json",
           type: "GET",

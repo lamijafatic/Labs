@@ -64,7 +64,7 @@
        fetchStudentsFromFile()
        function fetchStudentsFromFile() {
         $.ajax({
-            url: 'students.json', // Replace 'data.json' with the path to your JSON file
+            url: 'students.json', 
             type: 'GET',
             dataType: 'json',
             success: function (data) {
@@ -132,7 +132,7 @@
 
     
     $.ajax({
-        url: 'https://restcountries.com/v3.1/all', // Replace 'data.json' with the path to your JSON file
+        url: 'https://restcountries.com/v3.1/all', 
         type: 'GET',
         dataType: 'json',
         success: function (data) {
@@ -149,7 +149,7 @@
     });
 
     $.ajax({
-        url: 'https://restcountries.com/v3.1/name/Bosnia and Herzegovina', // Replace 'data.json' with the path to your JSON file
+        url: 'https://restcountries.com/v3.1/name/Bosnia and Herzegovina', 
         type: 'GET',
         dataType: 'json',
         success: function (data) {

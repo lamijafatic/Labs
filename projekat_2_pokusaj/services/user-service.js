@@ -8,7 +8,7 @@ let UserService = {
               window.location.replace("index.html");
           }, 2000);
 
-          return; // Da spriječimo izvršavanje ostatka koda
+          return;
       }
 
       $("#loginForm").validate({

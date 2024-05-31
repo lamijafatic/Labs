@@ -95,20 +95,20 @@
             
         }
         $(document).on('click', '.viewMore', function() {
-    // Dohvat ID-a odabranog studenta
+  
     var studentId = $(this).data('student-id');
     
-    // Provjeri postoji li stari ID u lokalnom skladištu
+    
     var oldStudentId = localStorage.getItem('selectedStudentId');
     if (oldStudentId && oldStudentId !== studentId) {
-        // Ako postoji i razlikuje se od novog ID-a, ukloni stari ID
+       
         localStorage.removeItem('selectedStudentId');
     }
     
-    // Spremi novi ID u lokalno skladište
+ 
     localStorage.setItem('selectedStudentId', studentId);
     
-    // Preusmjeri korisnika na novu stranicu ili obavijesti ih o promjeni
+   
     window.location.href = '#viewmore';
 
     $(document).ready(function() {
@@ -142,7 +142,7 @@
                   });
 
                   
-                //   localStorage.removeItem('selectedStudentId');
+               
 
                   console.log(selectedStudent)
               } else {
@@ -155,7 +155,7 @@
       });
   } else {
       console.log('No selected student ID found.');
-      // Ovdje možete dodati redirekciju ili obavijestiti korisnika
+     
   }
 });
 });
