@@ -33,6 +33,16 @@ $(document).ready(function() {
     view: "admin",
     load: "admin.html",
   });
+  app.route({
+    view: "vrijeme",
+    load: "vrijeme.html",
+  });
+  app.route({
+    view: "galerija",
+    load: "galerija.html",
+  });
+
+
 
   app.route({
     view: "table",
@@ -41,6 +51,10 @@ $(document).ready(function() {
   app.route({
     view: "viewmore",
     load: "view_more.html",
+  });
+  app.route({
+    view: "edukacije",
+    load: "edukacije.html",
   });
   // run app
   app.run();

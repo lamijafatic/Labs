@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/sass.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -17,7 +18,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  
     <title>Pridruzi se</title>
-   
+   <style>.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}</style>
     
 </head>
 <body>
@@ -45,7 +50,8 @@ $(function() {
        },
        telefon: {
          required: true,
-         minlength: 8
+         minlength: 8,
+         maxlength:12
        },
        obrazovanje: "required",
        cv:"required"
@@ -57,10 +63,20 @@ $(function() {
        prezime: "Please enter your last name",
        telefon: {
          required: "Please provide a phone number",
-         minlength: "Your phone number must be at least 8 characters long"
+         minlength: "Your phone number must be at least 8 characters long",
+         maxlength:"Your phone number should not be longer than 12 characters"
        },
        email: "Please enter a valid email address"
      },
+     onkeyup: function(element) {
+                    $(element).valid();
+                },
+                onfocusout: function(element) {
+                    $(element).valid();
+                },
+                onclick: function(element) {
+                    $(element).valid();
+                },
   
    });
  
@@ -80,7 +96,7 @@ $(function() {
       },
       error: function(xhr, status, error) {
       
-        alert('Forma je uspješno poslana!');
+        alert('Greška pri slanju forme!');
       }
     });
   });
@@ -109,6 +125,103 @@ $(function() {
         Članovi udruženja mogu biti studenti tehničkih i prirodnih nauka te istaknuti entuzijasti drugih fakulteta, mladi istraživači, diplomirani inžinjeri i stručnjaci u polju fizike,hemije,matematike,bioogije i elektrotehnike. Također se ohrabruju i svi ostali zaljubljenici u nauku da nam se pridruže i rade na svojim idejama.<br>
    <br> Ako te zanima nauka, želiš da unaprijediš svoje znanje ili budeš dio tima istraživača i predstaviš svoje ideje, pridruži nam se.<br>
 Sve dodatne informacije možete dobiti na :<span style="font-weight: bold;"> nikolatesla_bg_info@gmail.com </span></p>
+<div class="blog-header" id="blog-toggle" style="background-color: #024270; width:85vw;margin-left:35px ;">
+
+  <span class="naslov" style="color:white; font-size: 20px;">Vodič za prijavu</span>
+  <span class="arrow">&#9650;</span>
+</div><br>
+
+ <div class="holder" id="holder" style="margin-left:35px">
+
+ <div class="lijevo">
+ 
+
+<div class="blog-content" id="blog-content">
+
+
+<p><b>Vodič za Prijavu u Naučno Udruženje "Nikola Tesla"</b></p><br>
+
+Pridruživanje Naučnom Udruženju "Nikola Tesla" može vam pružiti brojne prednosti, uključujući pristup resursima, mogućnosti umrežavanja, i profesionalni razvoj. Evo detaljnog vodiča sa koracima za prijavu:
+<br>
+<b>1. Istraživanje Udruženja "Nikola Tesla"</b> <br>
+   Prvi korak je da se upoznate sa misijom, ciljevima i aktivnostima udruženja "Nikola Tesla".
+   Posetite zvaničnu web stranicu udruženja kako biste saznali više o njegovim ciljevima i aktivnostima.
+   Pročitajte recenzije i iskustva drugih članova kako biste dobili bolji uvid u prednosti članstva.
+   Istražite prethodne projekte i publikacije udruženja da biste videli kako možete doprineti.
+<br>
+ <b>2. Prikupljanje Potrebnih Dokumenata</b><br>
+
+Pripremite sve potrebne dokumente koji će biti potrebni za vašu prijavu u udruženje.
+  Saznajte tačne zahteve za prijavu, koji mogu uključivati vaš CV, preporuke, i publikacije.
+  Ažurirajte vaš CV sa najnovijim podacima o vašem obrazovanju, radnom iskustvu i istraživačkim projektima.
+   Pripremite kopije vaših najvažnijih radova ili publikacija koji demonstriraju vaš doprinos nauci.
+<br>
+<b> 3. Popunjavanje Prijavnog Obrasca</b>
+ <br>
+ Većina udruženja, uključujući i "Nikola Tesla", ima online prijavne obrasce koje treba da popunite.
+
+   Pažljivo pročitajte sve upute i zahteve za popunjavanje prijavnog obrasca.
+   Unesite tačne i potpune podatke, uključujući vaše lične informacije, obrazovanje, i profesionalno iskustvo.
+   Proverite da li ste ispravno priložili sve potrebne dokumente.
+<br>
+<b> 4. Pisanje Motivacionog Pisma</b>
+<br>Motivaciono pismo je ključni deo vaše prijave, gde objašnjavate zašto želite da se pridružite udruženju.
+
+   Opišite svoje istraživačke interese i kako se oni uklapaju u ciljeve udruženja.
+   Naglasite vaše relevantno iskustvo i postignuća.
+   Pokažite entuzijazam za doprinos radu udruženja i kako članstvo može pomoći vašem profesionalnom razvoju.
+<br><b>5. Pribavljanje Preporuka</b> <br>
+ Preporuke od kolega, profesora ili mentora mogu značajno povećati vaše šanse za prijem.
+   Zamolite osobe koje vas dobro poznaju i mogu pozitivno govoriti o vašim kvalifikacijama.
+   Uverite se da su preporuke personalizovane i relevantne za prijavu u naučno udruženje.
+   Zahvalite se svima koji su vam dali preporuke i obavestite ih o statusu vaše prijave.
+<br>
+ Nakon što ste prikupili sve potrebne dokumente i popunili prijavni obrazac, vreme je da podnesete prijavu.
+  Proverite još jednom da li ste ispravno popunili sve delove prijavnog obrasca.
+   Uverite se da ste priložili sve tražene dokumente.
+  Pošaljite prijavu putem zvaničnog kanala udruženja (obično online portal ili email).
+<br>
+<b>7. Praćenje Statusa Prijave</b><br>
+
+ Nakon podnošenja prijave, pratite status kako biste bili u toku sa njenim razmatranjem.
+
+  Proverite email za potvrdu o prijemu vaše prijave.
+   Ukoliko je potrebno, kontaktirajte udruženje da biste se informisali o statusu vaše prijave.
+   Budite strpljivi, proces može trajati neko vreme, ali pratite sve komunikacije i dodatne zahteve.
+<br>
+<b>Saveti za Uspešnu Prijavu<br>
+
+1. Prilagodite Prijavu: Svaku prijavu prilagodite specifičnim ciljevima i vrednostima udruženja "Nikola Tesla".<br>
+2. Pažljivo Pratite Upute: Uverite se da ste pažljivo pročitali i sledili sve upute za prijavu.<br>
+3. Istaknite Svoje Prednosti: Fokusirajte se na svoje jedinstvene kvalifikacije i iskustva koja vas čine idealnim kandidatom.<br>
+4. Povežite se sa Članovima: Ako imate priliku, razgovarajte sa postojećim članovima udruženja kako biste dobili dodatne informacije i savete.<br>
+5. Budite Proaktivni: Pokažite inicijativu i entuzijazam za učestvovanje u aktivnostima udruženja.<br>
+</b>
+Pridruživanje Naučnom Udruženju "Nikola Tesla" može biti značajan korak u vašoj naučnoj karijeri, otvarajući vrata za nove mogućnosti i profesionalni rast. Sledite ovaj vodič i povećajte svoje šanse za uspešnu prijavu.</p>
+
+    
+</div>
+</div>
+<div class="desno" id="desno">
+  <h1>Download Files</h1>
+  <a class="download-link" href="./data/Tutorial2.pdf" download>
+      <i class="fas fa-file-pdf"></i>
+      Download File 1 (PDF)
+  </a><br>
+  <a class="download-link" href="./data/Tutorial3.pdf" download>
+      <i class="fas fa-file-word"></i>
+      Download File 2 (DOCX)
+  </a><br>
+  <a class="download-link" href="./data/Tutorial3.pdf" download>
+      <i class="fas fa-file-archive"></i>
+      Download File 3 (ZIP)
+  </a><br>
+  <img src="./images/atom44.png" style="height: 25rem; width:21rem">
+</div>
+
+
+</div>
+<br><br>
 
 <div class="container">
    <div style="background-color:#2c2c99; color:white;"><h1>Prijava</h1></div>
