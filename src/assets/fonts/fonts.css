@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Precious';
+    src: url('./Precious.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Precious', sans-serif;
+}
