@@ -54,6 +54,7 @@ const Posts = () => {
 
   return (
     <>
+    <Typography style={{fontFamily:'Lucida Handwriting', paddingLeft:40,paddingTop:20, fontSize:'35px'}}>Our Halls</Typography>
       <Grid container spacing={2} className={classes.contentContainer}>
         <Grid item xs={12} md={6}>
         <Slider {...settings}>
@@ -66,7 +67,7 @@ const Posts = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Box p={2}>
-            <Rating name="rating" value={3} readOnly />
+            <Rating name="rating" value={4} readOnly />
             <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography>Details</Typography>
@@ -91,7 +92,45 @@ const Posts = () => {
           </Box>
         </Grid>
       </Grid>
-      {/* Ostatak koda za dodatne redove */}
+      <Grid container spacing={2} className={classes.contentContainer}>
+        <Grid item xs={12} md={6}>
+        <Box p={2}>
+            <Rating name="rating" value={4} readOnly />
+            <Accordion>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography>Details</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+  <Typography>
+    <strong>Description:</strong> Nestled in the heart of Cityville, our grand banquet hall number 1 exudes timeless elegance and charm. With its soaring ceilings, exquisite chandeliers, and opulent decor, it sets the stage for unforgettable events. From lavish weddings to corporate galas, this versatile venue caters to every occasion with style and sophistication. Boasting state-of-the-art amenities and impeccable service, it ensures a seamless and memorable experience for you and your guests.<br/>
+    <strong>Address:</strong> 123 Main Street, Cityville, State, ZIP Code<br/>
+    <strong>Included:</strong> 
+    <ul>
+      <li>State-of-the-art audiovisual equipment</li>
+      <li>Professional sound system</li>
+      <li>High-speed Wi-Fi</li>
+      <li>Decorative lighting</li>
+      <li>Ample parking space</li>
+    </ul>
+    <strong><span style={{fontWeight: 'bold'}}>Price:</span></strong> $25000 per event.
+  </Typography>
+</AccordionDetails>
+
+            </Accordion>
+          </Box>
+        </Grid>
+        <Grid item xs={12} md={6}>
+        <Slider {...settings}>
+          {images.map((url, index) => (
+            <div key={index} className={classes.imageContainer}>
+              <img src={url} alt={`Slide ${index + 1}`} className={classes.image} />
+            </div>
+          ))}
+        </Slider>
+         
+        </Grid>
+      </Grid>
+      
       <Grid container spacing={2} className={classes.contentContainer}>
         <Grid item xs={12} md={6}>
         <Slider {...settings}>
@@ -104,7 +143,7 @@ const Posts = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Box p={2}>
-            <Rating name="rating" value={3} readOnly />
+            <Rating name="rating" value={5} readOnly />
             <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography>Details</Typography>
@@ -129,7 +168,7 @@ const Posts = () => {
           </Box>
         </Grid>
       </Grid>
-      {/* Dodajte još ovakvih redova prema potrebi */}
+     
     </>
   );
 }

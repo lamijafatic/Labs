@@ -1,9 +1,7 @@
-body {
-  /* background-image: url('../../public/pozadina.jpg'); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
+.pozadina{
+    background-color: white !important;
+    margin:40px;
+  
 }
 .form-container {
     display: flex;
@@ -19,9 +17,7 @@ body {
     margin-bottom: 20px;
 }
 
-.submit-button {
-  
-}
+
 .naslov{
     padding-top: 10px;
 }
